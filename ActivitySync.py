@@ -15,7 +15,7 @@ def encrpt(password, public_key):
     cipher = PKCS1_v1_5.new(rsa)
     return base64.b64encode(cipher.encrypt(password.encode())).decode()
 
-def syncData(username, password, garmin_email = 2188520648@qq.com, garmin_password = Stysty071225):
+def syncData(username, password, garmin_email = None, garmin_password = None):
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
         "Accept-Encoding" : "gzip, deflate",
